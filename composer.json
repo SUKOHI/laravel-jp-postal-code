@@ -1,0 +1,27 @@
+{
+    "name": "sukohi/laravel-jp-postal-code",
+    "description": "A Laravel package that allows you to search address with Japanese postal code.",
+    "authors": [
+        {
+            "name": "sukohi",
+            "email": "capilano.sukohi@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "^5.7|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sukohi\\LaravelJpPostalCode\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sukohi\\LaravelJpPostalCode\\LaravelJpPostalCodeServiceProvider"
+            ]
+        }
+    }
+}
