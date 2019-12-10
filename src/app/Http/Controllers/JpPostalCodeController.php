@@ -10,6 +10,7 @@ class JpPostalCodeController extends Controller
 {
     public function index(Request $request) {
 
+        $postal_code = null;
         $first_code = '';
         $last_code = '';
 
@@ -28,7 +29,12 @@ class JpPostalCodeController extends Controller
 
         }
 
-        $postal_code = JpPostalCode::whereSearch($first_code, $last_code)->first();
+        if(preg_match('|[0-9]{3}|', $first_code) && preg_match('|[0-9]{4}|', $last_code)) {
+
+            $postal_code = JpPostalCode::whereSearch($first_code, $last_code)->first();
+
+        }
+
         return ['postal_code' => $postal_code];
 
     }
