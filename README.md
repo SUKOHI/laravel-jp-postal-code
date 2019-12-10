@@ -6,7 +6,7 @@ A Laravel package that allows you to search address with Japanese postal code.
 
 Run the following command.
 
-    composer require sukohi/laravel-jp-postal-code
+    composer require sukohi/laravel-jp-postal-code:1.*
     
 # Preparation
 
